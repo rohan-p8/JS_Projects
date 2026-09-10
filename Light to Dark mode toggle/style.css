@@ -3,14 +3,33 @@
     padding: 0;
 }
 
+body {
+    background-color: white;
+    color: black;
+}
+
 .container {
     height: 100vh;
+    width: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
 }
 
 #mode {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+    text-align: center;
+    font-weight: 600;
+    border: 1px 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+}
+
+#switch {
     padding: 0.5rem;
     font-size: 0.95rem;
     text-align: center;
@@ -28,4 +47,9 @@ button:hover {
 
 button:active {
     transform: translateY(0);
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
 }
