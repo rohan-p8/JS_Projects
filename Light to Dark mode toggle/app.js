@@ -1,15 +1,15 @@
-let mode = document.querySelector("button");
+let mode = document.querySelector("#mode");
 
+let change = document.querySelector("#switch");
 
-function changeMode() {
-    mode = 0
-
-    if (mode === 0) {
-        document.body.style.backgroundColor =
-    }
-}
-
+let para = document.querySelector("#para");
 
 mode.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
+
+change.addEventListener("click", () => {
+
+    para.innerText = "Text Changed";
 
 });
