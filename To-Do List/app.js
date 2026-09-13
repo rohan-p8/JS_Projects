@@ -21,6 +21,7 @@ function addTask() {
     delBtn.textContent = "X";
     delBtn.classList.add("del-btn");
 
+
     delBtn.addEventListener("click", () => {
         li.remove();
     });
@@ -30,7 +31,6 @@ function addTask() {
     li.appendChild(delBtn);
 
     taskList.appendChild(li);
-
 
 }
 
@@ -43,4 +43,5 @@ textarea.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         addTask();
     }
+
 });
