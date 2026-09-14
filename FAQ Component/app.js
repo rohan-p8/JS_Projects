@@ -2,7 +2,7 @@ const accordion = document.querySelector(".accordion");
 
 accordion.addEventListener("click", (e) => {
 
-    const header = e.target.closest("header");
+    const header = e.target.closest(".header");
 
     if (!header)
         return;
@@ -13,7 +13,7 @@ accordion.addEventListener("click", (e) => {
     const isActive = item.classList.contains("active");
 
 
-    const allItem = accordian.querySelectorAll(".item");
+    const allItem = accordion.querySelectorAll(".item");
 
     allItem.forEach((otherItem) => {
 
