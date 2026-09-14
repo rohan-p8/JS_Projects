@@ -1,6 +1,6 @@
-const accordian = document.querySelector(".accordian");
+const accordion = document.querySelector(".accordion");
 
-accordian.addEventListener("click", (e) => {
+accordion.addEventListener("click", (e) => {
 
     const header = e.target.closest("header");
 
