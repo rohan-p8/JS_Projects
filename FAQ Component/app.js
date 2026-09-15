@@ -24,6 +24,7 @@ accordion.addEventListener("click", (e) => {
     });
 
 
+
     if (!isActive) {
         item.classList.add("active");
 
