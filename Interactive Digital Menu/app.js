@@ -54,3 +54,42 @@ const menu = [{
 
 const menuGrid = document.getElementById("menu-grid");
 const filterBtns = document.querySelectorAll(".filter-btn");
+
+function displayMenuItems(menuItems) {
+    let displayMenu = menuItems.map((item) => {
+        return `
+            <article class="menu-item">
+                <img src="${item.img}" alt="${item.title}" class="photo" />
+                <div class="item-info">
+                <header class="item-header">
+                    <h4>${item.title}</h4>
+                    <span class="price">$${item.price.toFixed(2)}</span>
+                </header>
+                <p class="item-text">${item.desc}</p>
+                </div>
+            </article>
+        `;
+    });
+
+    displayMenu = displayMenu.join("");
+    menuGrid.innerHTML = displayMenu;
+}
+
+
+filterBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        const category = e.currentTarget.dataset.category;
+
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        e.currentTarget.classList.add("active");
+
+        if (category === "all") {
+            displayMenuItems(menu);
+        } else {
+            const menuCategory = menu.filter((item) => item.category === category);
+        }
+    });
+});
+
+
+displayMenuItems(menu);
