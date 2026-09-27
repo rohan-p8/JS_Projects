@@ -10,5 +10,16 @@ searchInput.addEventListener("input", (e) => {
         const itemText = item.textContent.toLowerCase();
 
 
+        if (itemText.includes(query)) {
+            item.computedStyleMap.display = "";
+            matchesCount++;
+
+        } else {
+            item.computedStyleMap.display = "none";
+        }
     })
 });
+
+if (matchesCount === 0) {
+    noResults.classList.remove("hidden");
+}
