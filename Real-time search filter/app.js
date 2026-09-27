@@ -17,9 +17,14 @@ searchInput.addEventListener("input", (e) => {
         } else {
             item.computedStyleMap.display = "none";
         }
-    })
-});
+    });
 
-if (matchesCount === 0) {
-    noResults.classList.remove("hidden");
-}
+
+    if (matchesCount === 0) {
+        noResults.classList.remove("hidden");
+
+    } else {
+        noResults.classList.add("hidden");
+    }
+
+});
