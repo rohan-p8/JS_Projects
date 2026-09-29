@@ -63,4 +63,32 @@ body {
     cursor: pointer;
 }
 
-.slider-header {}
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#price-display {
+    margin-bottom: 12px;
+}
+
+#price-range {
+    width: 100%;
+    accent-color: #38bdf8;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 8px;
+    background: #334155;
+    color: #e2e8f0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
