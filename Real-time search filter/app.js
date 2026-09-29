@@ -11,11 +11,11 @@
 
 
 //         if (itemText.includes(query)) {
-//             item.computedStyleMap.display = "";
+//             item.style.display = "";
 //             matchesCount++;
 
 //         } else {
-//             item.computedStyleMap.display = "none";
+//             item.style.display = "none";
 //         }
 //     });
 
