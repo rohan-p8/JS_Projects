@@ -10,6 +10,46 @@
 
 <body>
 
+    <div class="app-layout">
+        <aside class="filter-panel">
+
+            <h3>Filter Component</h3>
+
+
+            <div class="filter-group">
+                <h4>Category</h4>
+                <label><input type="checkbox" name="category" value="GPU">GPU</label>
+                <label><input type="checkbox" name="category" value="CPU">CPU</label>
+                <label><input type="checkbox" name="category" value="RAM">RAM</label>
+            </div>
+
+
+            <div class="filter-group">
+                <div class="slider-header">
+                    <h4>Max Price</h4>
+                    <span id="price-display">$1000</span>
+                </div>
+
+                <input type="range" id="price-range" min="50" max="1000" step="50" value="1000">
+            </div>
+
+            <button id="reset-filter" class="reset-btn">Reset All</button>
+
+        </aside>
+
+
+        <main class="content-area">
+            <div class="top-bar">
+                <h2>Hardware Inventory</h2>
+                <span id="match-count" class="count-badge">0 items found</span>
+            </div>
+
+            <div class="product-grid" id="product-grid"></div>
+
+            <p id="empty-state" class="empty-state hidden">No components match your current filters.</p>
+        </main>
+    </div>
+
     <script src="app.js"></script>
 </body>
 
