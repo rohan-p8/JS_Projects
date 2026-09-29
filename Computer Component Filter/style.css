@@ -92,3 +92,7 @@ body {
     font-weight: 600;
     transition: background-color 0.2s;
 }
+
+.reset-btn:hover {
+    background: #475569;
+}
