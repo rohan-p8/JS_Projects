@@ -26,3 +26,25 @@ const priceDisplay = document.getElementById("price-display");
 const resetBtn = document.getElementById("reset-filter");
 const categoryBoxes = document.querySelectorAll('input[name="category"]');
 const brandBoxes = document.querySelectorAll('input[name="brand"]');
+
+function renderProducts(items) {
+    grid.innerHTML = items
+        .map(
+            (p) => `
+      <article class="card">
+        <div class="card-tags">
+          <span class="tag">${p.category}</span>
+          <span class="tag">${p.brand}</span>
+        </div>
+        <h4>${p.name}</h4>
+        <div class="card-footer">
+          <span class="price">$${p.price}</span>
+        </div>
+      </article>
+    `
+        )
+        .join("");
+
+    matchCount.textContent = `${items.length} ${items.length === 1 ? "item" : "items"} found`;
+    emptyState.classList.toggle("hidden", items.length > 0);
+}
