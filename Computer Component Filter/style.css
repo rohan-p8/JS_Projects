@@ -157,3 +157,26 @@ body {
     border-top: 1px solid #334155;
     padding-top: 10px;
 }
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #34d399;
+}
+
+.empty-state {
+    text-align: center;
+    color: #94a3b8;
+    padding: 48px 0;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .app-layout {
+        grid-template-columns: 1fr;
+    }
+}
