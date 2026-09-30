@@ -96,3 +96,15 @@ body {
 .reset-btn:hover {
     background: #475569;
 }
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.count-badge {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
