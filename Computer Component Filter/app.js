@@ -23,6 +23,6 @@ const emptyState = document.getElementById("empty-state");
 const matchCount = document.getElementById("match-count");
 const priceSlider = document.getElementById("price-range");
 const priceDisplay = document.getElementById("price-display");
-const reserBtn = document.getElementById("reser-filter");
+const resetBtn = document.getElementById("reset-filter");
 const categoryBoxes = document.querySelectorAll('input[name="category"]');
 const brandBoxes = document.querySelectorAll('input[name="brand"]');
