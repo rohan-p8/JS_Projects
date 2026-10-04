@@ -48,3 +48,43 @@ function renderProducts(items) {
     matchCount.textContent = `${items.length} ${items.length === 1 ? "item" : "items"} found`;
     emptyState.classList.toggle("hidden", items.length > 0);
 }
+
+function getSelectedValues(checkboxes) {
+    return Array.from(checkboxes)
+        .filter((box) => box.checked)
+        .map((box) => box.value);
+}
+
+function filterProducts() {
+    const selectedCategories = getSelectedValues(categoryBoxes);
+    const selectedBrands = getSelectedValues(brandBoxes);
+    const maxPrice = parseInt(priceSlider.value, 10);
+
+    const result = products.filter((p) => {
+        const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(p.category);
+        const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(p.brand);
+        const matchesPrice = p.price <= maxPrice;
+
+        return matchesCategory && matchesBrand && matchesPrice;
+    });
+
+    renderProducts(result);
+}
+
+categoryBoxes.forEach((cb) => cb.addEventListener("change", filterProducts));
+brandBoxes.forEach((cb) => cb.addEventListener("change", filterProducts));
+
+priceSlider.addEventListener("input", (e) => {
+    priceDisplay.textContent = `$${e.target.value}`;
+    filterProducts();
+});
+
+resetBtn.addEventListener("click", () => {
+    categoryBoxes.forEach((cb) => (cb.checked = false));
+    brandBoxes.forEach((cb) => (cb.checked = false));
+    priceSlider.value = 1000;
+    priceDisplay.textContent = `$${priceSlider.value}`;
+    filterProducts();
+});
+
+filterProducts(); // Initial render
