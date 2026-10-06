@@ -51,3 +51,37 @@ function updateStopwatch() {
     stopwatchDisplay.innerHTML = `${hours}:${minutes}:${seconds}<span class="ms">${hundredths}</span>`;
 
 }
+
+startBtn.addEventListener("click", () => {
+    startTime = Date.now();
+
+    stopwatchInterval = setInterval(updateStopwatch, 10);
+
+    startBtn.disabled = true;
+    pauseBtn.disabled = false;
+    splitBtn.disabled = false;
+    resetBtn.disabled = false;
+});
+
+pauseBtn.addEventListener("click", () => {
+    clearInterval(stopwatchInterval);
+    elapsedTime += Date.now() - startTime;
+
+    startBtn.disabled = false;
+    pauseBtn.disabled = true;
+    splitBtn.disabled = true;
+});
+
+splitBtn.addEventListener("click", () => {
+    const currentTotal = elapsedTime + (Date.now() - startTime);
+    const { hours, minutes, seconds, hundredths } = formatStopwatchTime(currentTotal);
+    const lapString = `${hours}:${minutes}:${seconds}.${hundredths}`;
+
+
+    const li = document.createElement("li");
+
+    li.classList.add("lap-item");
+    li.innerHTML = `<span>Lap ${lapCounter++}</span><span>${lapString}</span>`;
+
+    lapsList.prepend(li);
+});
