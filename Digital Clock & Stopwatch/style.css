@@ -104,3 +104,31 @@ h2 {
     background-color: #ef4444;
     color: #450a0a;
 }
+
+
+/* Laps Window */
+
+.laps-container {
+    max-height: 140px;
+    overflow-y: auto;
+    margin-top: 12px;
+    border-top: 1px solid #334155;
+    padding-top: 8px;
+}
+
+#laps-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #0f172a;
+}
