@@ -1,5 +1,6 @@
-const clockDisplay = document.getElementById("clock-display");
+// Digital Clock Logic
 
+const clockDisplay = document.getElementById("clock-display");
 const dateDisplay = document.getElementById("date-display");
 
 function updateClock() {
@@ -39,16 +40,16 @@ function formatStopwatchTime(msTotal) {
     const seconds = String(totalSeconds % 60).padStart(2, "0");
     const hundredths = String(Math.floor((msTotal % 1000) / 10)).padStart(2, "0");
 
-    return `${hours}:${minutes}:${seconds}.${hundredths}`;
+    return { hours, minutes, seconds, hundredths };
 }
 
 function updateStopwatch() {
     const currentTime = Date.now();
-    const timeDifference = (currentTime - startTime) + elapsedTime;
+    const timeDifference = elapsedTime + (currentTime - startTime);
 
     const { hours, minutes, seconds, hundredths } = formatStopwatchTime(timeDifference);
 
-    stopwatchDisplay.innerHTML = `${hours}:${minutes}:${seconds}<span class="ms">${hundredths}</span>`;
+    stopwatchDisplay.innerHTML = `${hours}:${minutes}:${seconds}<span class="ms">.${hundredths}</span>`;
 
 }
 
@@ -84,4 +85,20 @@ splitBtn.addEventListener("click", () => {
     li.innerHTML = `<span>Lap ${lapCounter++}</span><span>${lapString}</span>`;
 
     lapsList.prepend(li);
+});
+
+resetBtn.addEventListener("click", () => {
+    clearInterval(stopwatchInterval);
+
+    stopwatchInterval = null;
+    elapsedTime = 0;
+    lapCounter = 1;
+
+    stopwatchDisplay.innerHTML = "00:00:00<span class='ms'>00</span>";
+    lapsList.innerHTML = "";
+
+    startBtn.disabled = false;
+    pauseBtn.disabled = true;
+    splitBtn.disabled = true;
+    resetBtn.disabled = true;
 });
