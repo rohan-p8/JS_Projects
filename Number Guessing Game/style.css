@@ -84,6 +84,7 @@ input::-webkit-inner-spin-button {
 .btn.primary {
     background-color: #38bdf8;
     color: #082f49;
+    margin-top: 10px;
 }
 
 .btn.secondary {
