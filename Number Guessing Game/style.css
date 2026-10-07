@@ -2,4 +2,94 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 20px;
+}
+
+.game-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 32px 28px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #38bdf8;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #94a3b8;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+input[type="number"] {
+    flex: 1;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #334155;
+    background: #0f172a;
+    color: #f8fafc;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #38bdf8;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.15 ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn.primary {
+    background-color: #38bdf8;
+    color: #082f49;
+}
+
+.btn.secondary {
+    background-color: #334155;
+    color: #f8fafc;
+    width: 100%;
+}
+
+.feedback-msg {}
