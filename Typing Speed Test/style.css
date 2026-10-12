@@ -28,7 +28,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
-.status-bar {
+.stats-bar {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12x;
@@ -38,3 +38,5 @@ body {
   border: 1px solid #334155;
   text-align: center;
 }
+
+.stat
