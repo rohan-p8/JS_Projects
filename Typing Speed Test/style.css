@@ -65,3 +65,13 @@ body {
   max-height: 180px;
   overflow-y: auto;
 }
+
+.quote-box span {
+  position: relative;
+  transition: color 0.1s ease;
+}
+
+.quote-box span.correct {
+  color: #4ade80;
+  
+}
