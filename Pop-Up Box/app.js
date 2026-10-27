@@ -15,7 +15,6 @@ function closeModal() {
     document.body.style.overflow = "";
 }
 
-
 openBtn.addEventListener("click", openModal);
 
 closeBtn.addEventListener("click", closeModal);
