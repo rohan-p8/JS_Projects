@@ -4,7 +4,6 @@ const closeBtn = document.getElementById("close-modal-btn");
 const cancelBtn = document.getElementById("cancel-btn");
 const overlay = document.getElementById("modal-overlay");
 
-
 function openModal() {
     overlay.classList.remove("hidden");
     document.body.style.overflow = "hidden";
