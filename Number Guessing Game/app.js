@@ -109,9 +109,6 @@
 // initGame();
 
 
-
-
-
 // 1. Select the exact IDs from the DOM
 const form = document.getElementById("guess-form");
 const guessInput = document.getElementById("guess-input");
