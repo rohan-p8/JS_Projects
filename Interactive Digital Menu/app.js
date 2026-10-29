@@ -75,7 +75,6 @@ function displayMenuItems(menuItems) {
     menuGrid.innerHTML = displayMenu;
 }
 
-
 filterBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
         const category = e.currentTarget.dataset.category;
