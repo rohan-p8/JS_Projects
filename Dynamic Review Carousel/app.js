@@ -40,9 +40,7 @@ const prev = document.getElementById("prev-btn");
 const next = document.getElementById("next-btn");
 const randomBtn = document.getElementById("random-btn");
 
-
 let curItem = 0;
-
 
 function showPerson(index) {
     const item = reviews[index];
