@@ -51,7 +51,6 @@ function showPerson(index) {
 }
 
 
-
 window.addEventListener("DOMContentLoaded", () => {
     showPerson(curItem);
 });
