@@ -20,7 +20,6 @@ function updateDisplay() {
     }
 }
 
-
 inc.addEventListener("click", () => {
     count++;
     updateDisplay();
