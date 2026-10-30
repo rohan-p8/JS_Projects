@@ -6,7 +6,6 @@ let dec = document.querySelector("#dec");
 
 let reset = document.querySelector("#reset");
 
-
 let count = 0;
 
 function updateDisplay() {
