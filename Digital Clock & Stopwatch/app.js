@@ -78,7 +78,6 @@ splitBtn.addEventListener("click", () => {
     const { hours, minutes, seconds, hundredths } = formatStopwatchTime(currentTotal);
     const lapString = `${hours}:${minutes}:${seconds}.${hundredths}`;
 
-
     const li = document.createElement("li");
 
     li.classList.add("lap-item");
